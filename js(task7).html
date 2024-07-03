@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Animation</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #fafafa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            position: relative;
+            width: 800px;
+            overflow: hidden;
+            border: 1px solid #dbdbdb;
+            background-color: #fff;
+        }
+        .train {
+            position: absolute;
+            width: 800px;
+            height: auto;
+            top: 0;
+            left: 0;
+            transition: transform 0.1s linear;
+        }
+        .controls {
+            margin-top: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #0095f6;
+            border: none;
+            border-radius: 3px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .button:disabled {
+            background-color: #b2dffc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="train.jpg" alt="Train" class="train" id="train">
+    </div>
+    <div class="controls">
+        <button class="button" id="startBtn" onclick="startTrain()">Start</button>
+        <button class="button" id="stopBtn" onclick="stopTrain()">Stop</button>
+    </div>
+
+    <script>
+        let train = document.getElementById('train');
+        let animationId;
+        let position = 0;
+
+        function startTrain() {
+            animationId = requestAnimationFrame(moveTrain);
+        }
+
+        function stopTrain() {
+            cancelAnimationFrame(animationId);
+        }
+
+        function moveTrain() {
+            position -= 5;
+            train.style.transform = `translateX(${position}px)`;
+            if (position <= -800) { 
+                position = 0;
+            }
+            animationId = requestAnimationFrame(moveTrain);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time and Date Display</title>
+    <script>
+        function showTime() {
+            let now = new Date();
+            let hours = now.getHours().toString();
+            let minutes = now.getMinutes().toString();
+            let seconds = now.getSeconds().toString();
+            let currentTime = hours + ':' + minutes + ':' + seconds;
+
+            document.getElementById('timeResult').innerText = "Current Time: " + currentTime;
+            document.getElementById('dateResult').innerText = "";
+        }
+
+        function showDate() {
+            let now = new Date();
+            let day = now.getDate().toString();
+            let month = (now.getMonth() + 1).toString();
+            let year = now.getFullYear();
+            let currentDate = day + '/' + month + '/' + year;
+
+            document.getElementById('dateResult').innerText = "Current Date: " + currentDate;
+            document.getElementById('timeResult').innerText = "";
+        }
+    </script>
+</head>
+<body>
+    <h1>Time and Date Display</h1>
+    <button onclick="showTime()">Show Time</button>
+    <button onclick="showDate()">Show Date</button>
+    <br><br>
+    <div id="timeResult"></div>
+    <div id="dateResult"></div>
+</body>
+</html>

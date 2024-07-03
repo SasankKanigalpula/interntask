@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello, World!</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: red;
+      margin: 0;
+      padding: 0;
+    }
+    table {
+      margin: 50px auto;
+      border-collapse: collapse;
+      width: 50%;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    th, td {
+      padding: 15px;
+      text-align: left;
+    }
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+    td input[type="text"], td input[type="radio"], td select {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    td label {
+      margin-left: 5px;
+    }
+    button {
+      display: block;
+      width: 50%;
+      padding: 10px;
+      margin: 20px auto;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    h4 {
+      text-align: center;
+    }
+    h4 input[type="radio"] {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+<table border="1">
+ <tr> 
+  </tr>
+  <tr>
+    <th>First Name</th>
+    <td><input type="text"><br /></td>
+  </tr>
+  <tr> 
+    <th>Last Name</th>
+    <td><input type="text" id="lname" name="lname"><br/></td>
+ </tr>
+ <tr> 
+    <th>Email</th>
+    <td><input type="text" id="email" name="email"><br /></td>
+ </tr>
+ <tr> 
+    <th>Password</th>
+    <td><input type="text" id="password" name="password"><br /></td>
+ </tr>
+ <tr> 
+    <th>Re-enter password</th>
+    <td><input type="text" id="repassword" name="repassword"><br /></td>
+ </tr>
+ <tr> 
+    <th>Gender</th>
+    <td>
+      <input type="radio" id="male" name="gender"><label for="male">Male</label> <br/>
+      <input type="radio" id="female" name="gender"><label for="female">Female</label><br />
+    </td>
+ </tr>
+ <tr> 
+    <th>Age</th>
+    <td><input type="text" id="age" name="age"><br /></td>
+ </tr>
+ <tr> 
+    <th>Phone Number</th>
+    <td><input type="text" id="phone" name="phone"><br /></td>
+ </tr>
+ <tr> 
+    <th>Address</th>
+    <td><input type="text" id="address" name="address"><br /></td>
+ </tr>
+ <tr> 
+    <th>State</th>
+    <td><input type="text" id="state" name="state"><br /></td>
+ </tr>
+ <tr> 
+    <th>Country</th>
+    <td>
+      <select id="country" name="country">
+        <option value="Choose your country">Choose your country</option>
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+        <option value="Saudi Arabia">Saudi Arabia</option>
+      </select>
+    </td>
+ </tr>
+ <tr> 
+    <th>Languages Known</th>
+    <td><input type="text" id="languages" name="languages"><br /></td>
+ </tr>
+</table>
+<h4><input type="radio" name="declaration"/>Hereby I declare all the values are true</h4>
+<button>Register</button>
+</body>
+</html>
